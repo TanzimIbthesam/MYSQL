@@ -55,6 +55,8 @@ FOREIGN KEY(user_id) REFERENCES newusers(id)
 
 
 )
+Basic sql
+
 
 
 
