@@ -1,0 +1,61 @@
+1.How to create a new Database?
+CREATE DATABASE newdb
+2.How to create a new table?
+CREATE TABLE newusers(
+first_name VARCHAR(100),
+last_name  VARCHAR(100),
+address    VARCHAR(100),
+telephonenum integer(50),
+PRIMARY   KEY(id)    
+
+
+
+);
+3.INSERT 
+INSERT INTO newusers(first_name,last_name,address,telephonenum) VALUES('Tanzim','Ibthesam','Baridhara DOHS',01741404963),('Mark','Revlon','Australia',0174145689);
+
+4. UPDATE 
+UPDATE newsers SET telephonenum=014567899 WHERE id=1;
+
+5.DELETE
+DELETE FROM newusers WHERE id=2; 
+
+6.SELECT
+SELECT all
+SELECT * FROM newusers;
+
+with sepcific id
+SELECT * FROM newusers WHERE id=1; 
+with specific location
+SELECT * FROM newusers WHERE address='Australia'; 
+
+7.Add new column
+ALTER table newusers ADD age VARCHAR(3);
+8.Modify new column
+ALTER table newusers modify age int(11);
+9. Order by(sort)
+SELECT * FROM newusers ORDER BY id DESC
+SELECT * FROM newusers ORDER BY id ASC
+
+10.Concatenate Columns
+SELECT CONCAT(first_name,'',last_name) AS 'Fullname' from newusers;
+11.Distinct 
+SELECT DISTINCT address FROM newusers;
+
+SELECT * FROM newusers age BETWEEN 30 and 35;
+11.
+CREATE TABLE orders(
+id INT AUTO_INCREMENT,
+product_name VARCHAR(50),
+order_no      integer(50),
+user_id INT,
+
+PRIMARY KEY(id),
+FOREIGN KEY(user_id) REFERENCES newusers(id)
+
+
+)
+
+
+
+
