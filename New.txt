@@ -56,8 +56,13 @@ FOREIGN KEY(user_id) REFERENCES newusers(id)
 
 )
 Basic sql
-
-
+SQL JOIN
+INNER JOIN
+SELECT posts.title, users.first_name, comments.content FROM posts INNER JOIN comments ON posts.id=comments.users_id INNER JOIN users ON users.id=posts.user_id ORDER BY posts.title
+LEFT JOIN 
+SELECT posts.title, users.first_name, comments.content FROM posts LEFT JOIN comments ON posts.id=comments.users_id LEFT JOIN users ON users.id=posts.user_id ORDER BY posts.title
+RIGHT JOIN
+SELECT posts.title, users.first_name, comments.content FROM posts RIGHT JOIN comments ON posts.id=comments.users_id RIGHT JOIN users ON users.id=posts.user_id ORDER BY posts.title
 
 
 
