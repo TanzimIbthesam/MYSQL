@@ -64,5 +64,18 @@ SELECT posts.title, users.first_name, comments.content FROM posts LEFT JOIN comm
 RIGHT JOIN
 SELECT posts.title, users.first_name, comments.content FROM posts RIGHT JOIN comments ON posts.id=comments.users_id RIGHT JOIN users ON users.id=posts.user_id ORDER BY posts.title
 
+COUNT 
+SELECT COUNT(id) FROM comments;
+Aggregate functions 
+SELECT MAX(age) FROM newusers;
+SELECT MIN(age) FROM newusers;
+SELECT SUM(age) FROM newusers;
+GROUP BY 
+SELECT 
+address,
+COUNT(address) AS COUNT
+FROM newusers GROUP BY address;
+
+
 
 
